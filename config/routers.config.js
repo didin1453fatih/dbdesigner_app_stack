@@ -7,30 +7,8 @@ module.exports = {
     action: "front-office/authController.js",
     policies: ["user"]
   },
-  "GET /": {
-    action: "front-office/home",
-    policies: ["publicAuth"]
-  },
-  "GET /about": {
-    action: "front-office/about",
-    policies: ["publicAuth"]
-  },
-  "GET /login": {
-    view: "front-office/registration/form-login"
-  },
-  "POST /login": {
-    action: "front-office/loginForm"
-  },
   // VIEW SYSTEM
-  "POST /registration": {
-    action: "front-office/registration"
-  },
-  "GET /registration": {
-    view: "front-office/registration/form-register"
-  },
-  "GET /forget-password": {
-    view: "front-office/registration/form-forget-password"
-  },
+
   "POST /forget-password": {
     action: "front-office/forgetPassword"
   },
