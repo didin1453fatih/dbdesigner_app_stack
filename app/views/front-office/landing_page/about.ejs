@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-141765789-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-141765789-1");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Title -->
+    <title>dbdesigner.id</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/static/landing_page/img/core-img/favicon.png" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/static/landing_page/style.css" />
+    <style>
+      /* h2 {
+        color: black;        
+    }
+    h3 {
+        color: black !important;        
+    }
+    p {
+        color: black !important;        
+    }
+    span {
+        color: black;        
+    }
+    h5 {
+        color: black;        
+    }
+    .navLi{
+        color: black !important;   
+    } */
+      /* .single-welcome-slide {
+        background-color: white !important;
+    } */
+      /*.classy-nav-container {
+        background-color: white !important;
+    } */
+      /* .top-header-area {
+        background-color: white !important;
+    } */
+    </style>
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <!-- <div id="preloader">
+        <div class="loader"></div>
+    </div> -->
+    <!-- /Preloader -->
+
+    <header class="header-area">
+      <!-- Top Header Area Start -->
+      <div class="top-header-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <div class="top-header-content">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/didin1453fatih/"
+                >
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <span>Instagram: didin1453fatih</span>
+                </a>
+                <a href="#">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span>Email: didin1453fatih@gmail.com</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="top-header-content">
+                <% if(user_name===null){ %>
+                <!-- Login -->
+                <a href="/login"
+                  ><i class="fa fa-lock" aria-hidden="true"></i>
+                  <span>Login</span></a
+                >
+                <!-- Registration -->
+                <a href="/registration" style="padding-right:20px"
+                  ><span>Register</span></a
+                >
+                <% } else { %>
+                <a href="/app"
+                  ><i class="fa fa-user-o" aria-hidden="true"></i>
+                  <span><%= user_name %></span></a
+                >
+                <% } %>
+                <!-- Language -->
+                <div class="dropdown">
+                  <a
+                    class="btn pr-0 dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="langdropdown"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    ><img
+                      src="/static/landing_page/img/core-img/eng.png"
+                      alt=""
+                    />
+                    English</a
+                  >
+                  <div
+                    class="dropdown-menu dropdown-menu-right"
+                    aria-labelledby="langdropdown"
+                  >
+                    <a class="dropdown-item" href="#">- Indonesian</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Top Header Area End -->
+
+      <!-- Main Header Start -->
+      <div class="main-header-area">
+        <div class="classy-nav-container breakpoint-off">
+          <div class="container">
+            <!-- Classy Menu -->
+            <nav class="classy-navbar justify-content-between" id="hamiNav">
+              <!-- Logo -->
+              <a class="nav-brand" href="index.html" style="color:white">
+                <!-- Uwais.online -->
+                <!-- <img src="./img/core-img/logo.png" alt=""> -->
+              </a>
+
+              <!-- Navbar Toggler -->
+              <div class="classy-navbar-toggler">
+                <span class="navbarToggler"
+                  ><span></span><span></span><span></span
+                ></span>
+              </div>
+
+              <!-- Menu -->
+              <div class="classy-menu">
+                <!-- Menu Close Button -->
+                <div class="classycloseIcon">
+                  <div class="cross-wrap">
+                    <span class="top"></span><span class="bottom"></span>
+                  </div>
+                </div>
+                <!-- Nav Start -->
+                <div class="classynav" style="z-index: 100;">
+                  <ul id="nav">
+                    <li class="active"><a class="navLi" href="/">Home</a></li>
+                    <li><a class="navLi" href="/docs">Docs</a></li>
+                    <li><a class="navLi" href="/about">About</a></li>
+                    <li>
+                      <a
+                        class="navLi"
+                        target="_blank"
+                        href="https://github.com/didin1453fatih/dbdesigner.id"
+                        >Github</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Nav End -->
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Welcome Area Start -->
+    <section class="welcome-area">
+      <!-- Welcome Pattern -->
+      <!-- <div class="welcome-pattern ">
+                <img src="/static/landing_page/img/core-img/welcome-pattern.png" alt="">
+            </div> -->
+      <!-- Single Welcome Slide -->
+      <div
+        class="single-welcome-slide hami--video--area"
+        style="height: 100% !important;"
+      >
+        <!-- Welcome Content -->
+        <div class="welcome-content h-100">
+          <div class="container ">
+            <div class="row h-100 align-items-top">
+              <!-- <div class="col-12 col-md-5" style="padding-bottom: 100px">
+                                <div class="video-content-area pr-3 mb-100">
+                                    <img style="color: rgb(224, 172, 0); width:100%;"                                    
+                                        src="/static/landing_page/img/bg-img/dbdesigner-history.png" alt="">
+                                </div>
+                            </div>                             -->
+              <!-- Welcome Text -->
+              <div class="col-12 col-md-7" style="margin-top:0">
+                <div class="welcome-text mb-50 ">
+                  <h3
+                    class="newFontColor"
+                    data-animation="fadeInLeftBig"
+                    data-delay="100ms"
+                    data-duration="1s"
+                    style="padding-bottom: 0px;margin-bottom: 0px"
+                  >
+                    Why i develop this project
+                  </h3>
+                  <!-- <h3 class="newFontColor" data-animation="fadeInLeftBig" data-delay="200ms"
+                                        data-duration="1s">Database Design</h3> -->
+                  <p
+                    class="newFontColor"
+                    data-animation="fadeInLeftBig"
+                    data-delay="300ms"
+                    data-duration="1s"
+                  >
+                    <b style="color:coral;"
+                      >"I have ambitions to make database tools cheap and free
+                      for all"</b
+                    >
+                  </p>
+
+                  <p>
+                    I work in little company. I join as backend
+                    team in this company. My company is very very little. When i
+                    work in database i got advise to use navicat. This is better
+                    solution for database tools from design relational database
+                    until manage the pysical database.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Area Start -->
+    <section class="hami-team-area mb-70">
+      <!-- Welcome Pattern -->
+      <!-- <div class="welcome-pattern">
+                <img src="/static/landing_page/img/core-img/welcome-pattern.png" alt="">
+        </div> -->
+
+      <!-- Welcome Slide -->
+
+      <div class="container">
+        <div class="row">
+          <!-- Section Heading -->
+          <div class="col-12">
+            <div class="section-heading text-center" style="padding-top:70px">
+              <h2>Project maintainer</h2>
+              <p>
+                Smart work to make real our dream but don't forget family and
+                HEAVEN
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Single Team Member Area -->
+          <div class="col-12 col-sm-6">
+            <div
+              class="single-team-member-area d-flex align-items-center mb-30"
+            >
+              <!-- Team Thumbnail -->
+              <div class="team-thumbnail">
+                <img src="/static/landing_page/img/bg-img/didin.jpg" alt="" />
+              </div>
+              <!-- Team Content -->
+              <div class="team-content">
+                <h5>Didin</h5>
+                <span>Main Contributor</span>
+                <p>
+                  Lorem Ipsum which looks reasonable generated as default model
+                  as and search many web sites pass websites.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Team Member Area -->
+          <div class="col-12 col-sm-6">
+            <div
+              class="single-team-member-area d-flex align-items-center mb-30"
+            >
+              <!-- Team Thumbnail -->
+              <div class="team-thumbnail">
+                <img src="/static/landing_page/img/bg-img/anon.png" alt="" />
+              </div>
+              <!-- Team Content -->
+              <div class="team-content">
+                <h5>You</h5>
+                <span>Contributor</span>
+                <p>
+                  Lorem Ipsum which looks reasonable generated as default model
+                  as and search many web sites pass websites.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Team Member Area -->
+          <div class="col-12 col-sm-6">
+            <div
+              class="single-team-member-area d-flex align-items-center mb-30"
+            >
+              <!-- Team Thumbnail -->
+              <div class="team-thumbnail">
+                <img src="/static/landing_page/img/bg-img/anon.png" alt="" />
+              </div>
+              <!-- Team Content -->
+              <div class="team-content">
+                <h5>You</h5>
+                <span>Software Engineer</span>
+                <p>
+                  Lorem Ipsum which looks reasonable generated as default model
+                  as and search many web sites pass websites.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Team Member Area -->
+          <div class="col-12 col-sm-6">
+            <div
+              class="single-team-member-area d-flex align-items-center mb-30"
+            >
+              <!-- Team Thumbnail -->
+              <div class="team-thumbnail">
+                <img src="/static/landing_page/img/bg-img/anon.png" alt="" />
+              </div>
+              <!-- Team Content -->
+              <div class="team-content">
+                <h5>You</h5>
+                <span>Software Engineer</span>
+                <p>
+                  Lorem Ipsum which looks reasonable generated as default model
+                  as and search many web sites pass websites.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Team Area End -->
+
+    <!-- Call To Action Area Start -->
+    <!-- <section class="hami-cta-area">
+        <div class="container">
+            <div class="cta-text">
+                <h2>Proudly Database Designer Over <span class="counter">0</span> Design Since 2019</h2>
+            </div>
+        </div>
+    </section> -->
+    <!-- Call To Action Area End -->
+
+    <!-- Footer Area Start -->
+    <footer class="footer-area">
+      <!-- <footer class="footer-area section-padding-80-0"> -->
+
+      <!-- Main Footer Area -->
+      <!-- <div class="main-footer-area">
+                <div class="container">
+                    <div class="row justify-content-between"> -->
+
+      <!-- Single Footer Widget Area -->
+      <!-- <div class="col-6 col-sm-4 col-lg-2">
+                            <div class="single-footer-widget mb-80"> -->
+      <!-- Widget Title -->
+      <!-- <h5 class="widget-title">Products</h5> -->
+
+      <!-- Footer Nav -->
+      <!-- <ul class="footer-nav"> -->
+      <!-- <li><a href="#">Database Designer</a></li>
+                                    <li><a href="#">SaaS Form Builder</a></li>
+                                    <li><a href="#">Mobile App Builder</a></li>
+                                    <li><a href="#">App Hosting</a></li> -->
+      <!-- <li><a href="#">Reseller hosting</a></li>
+                                    <li><a href="#">Hosting features</a></li> -->
+      <!-- </ul>
+                            </div>
+                        </div> -->
+
+      <!-- Single Footer Widget Area -->
+      <!-- <div class="col-6 col-sm-4 col-lg-2">
+                            <div class="single-footer-widget mb-80"> -->
+      <!-- Widget Title -->
+      <!-- <h5 class="widget-title">Company</h5> -->
+
+      <!-- Footer Nav -->
+      <!-- <ul class="footer-nav"> -->
+      <!-- <li><a href="#">About</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Terms of service</a></li>
+                                    <li><a href="#">Privacy policy</a></li> -->
+      <!-- <li><a href="#">Blog</a></li> -->
+      <!-- </ul>
+                            </div>
+                        </div> -->
+
+      <!-- Single Footer Widget Area -->
+      <!-- <div class="col-6 col-sm-4 col-lg-2">
+                            <div class="single-footer-widget mb-80"> -->
+      <!-- Widget Title -->
+      <!-- <h5 class="widget-title">Products</h5> -->
+
+      <!-- Footer Nav -->
+      <!-- <ul class="footer-nav">
+                                    <li><a href="#">Shared hosting</a></li>
+                                    <li><a href="#">WordPress hosting</a></li>
+                                    <li><a href="#">Vps hosting</a></li>
+                                    <li><a href="#">Dedicated hosting</a></li>
+                                    <li><a href="#">Reseller hosting</a></li>
+                                    <li><a href="#">Hosting features</a></li>
+                                </ul> -->
+      <!-- </div>
+                        </div> -->
+
+      <!-- Single Footer Widget Area -->
+      <!-- <div class="col-6 col-sm-4 col-lg-2">
+                            <div class="single-footer-widget mb-80"> -->
+      <!-- Widget Title -->
+      <!-- <h5 class="widget-title">Company</h5> -->
+
+      <!-- Footer Nav -->
+      <!-- <ul class="footer-nav">
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Terms of service</a></li>
+                                    <li><a href="#">Privacy policy</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                </ul> -->
+      <!-- </div>
+                        </div> -->
+
+      <!-- Single Footer Widget Area -->
+      <!-- <div class="col-12 col-sm-8 col-lg-4">
+                            <div class="single-footer-widget mb-80"> -->
+      <!-- Widget Title -->
+      <!-- <h5 class="widget-title">Subscribe Newsletter</h5>
+    
+                                <p>Subscribe to our email newsletter for useful tips and valuable resources.</p>
+     -->
+      <!-- Newsletter Form -->
+      <!-- <form action="index.html" class="nl-form">
+                                    <input type="email" class="form-control" placeholder="Your Mail">
+                                    <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                </form>
+     -->
+      <!-- Social Info -->
+      <!-- <div class="social-info"> -->
+      <!-- <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> -->
+      <!-- <a target="_blank" href="https://twitter.com/didin1453fatih" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> -->
+      <!-- <a href="#" class="google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a> -->
+      <!-- <a target="_blank" href="https://www.instagram.com/didin1453fatih/" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a> -->
+      <!-- <a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a> -->
+      <!-- </div>
+                            </div>
+                        </div>
+     -->
+      <!-- </div>
+                </div>
+            </div> -->
+
+      <!-- Bottom Footer Area -->
+      <div class="bottom-footer-area bg-gray">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+              <!-- Copywrite Text -->
+              <div class="copywrite-text">
+                <p>
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  Copyright &copy;
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  All rights reserved | This template is made with
+                  <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                  <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <!-- Payment Methods -->
+              <!-- <div class="payments-methods d-flex align-items-center">
+                                <p>Payments We Accept</p>
+                                <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                                <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+                                <i class="fa fa-cc-discover" aria-hidden="true"></i>
+                                <i class="fa fa-cc-amex" aria-hidden="true"></i>
+                                <i class="fa fa-cc-paypal" aria-hidden="true"></i>
+                                <i class="fa fa-cc-stripe" aria-hidden="true"></i>
+                            </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <script src="/static/landing_page/js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="/static/landing_page/js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/static/landing_page/js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="/static/landing_page/js/hami.bundle.js"></script>
+    <!-- Active -->
+    <script src="/static/landing_page/js/default-assets/active.js"></script>
+  </body>
+</html>
