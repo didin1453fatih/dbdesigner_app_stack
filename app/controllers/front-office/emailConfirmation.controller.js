@@ -16,19 +16,19 @@ module.exports = {
   outputs: {
     success: {
       redirect__re_login: {
-        location: "/app/#?src=mail_confirmation&action=re_login"
+        location: "/#?src=mail_confirmation&action=re_login"
       },
       redirect__home: {
-        location: "/app/#?src=mail_confirmation&action=open_project"
+        location: "/#?src=mail_confirmation&action=open_project"
       }
     },
     error: {
       redirect__error_email_confirmation_expired: {
         location:
-          "/app/#?src=mail_confirmation&action=error_email_confirmation_expired"
+          "/#?src=mail_confirmation&action=error_email_confirmation_expired"
       },
       redirect__token_not_valid: {
-        location: "/app/#?src=mail_confirmation&action=token_not_valid"
+        location: "/#?src=mail_confirmation&action=token_not_valid"
       }
     }
   },

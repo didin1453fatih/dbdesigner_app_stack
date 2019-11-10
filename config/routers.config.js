@@ -109,7 +109,7 @@ module.exports = {
     action: "back-office/account/resendVerification",
     policies: ["user"]
   },
-  "GET /app": {
+  "GET /": {
     action: "back-office/app/app"
   }
 };

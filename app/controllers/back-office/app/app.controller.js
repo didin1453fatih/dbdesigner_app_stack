@@ -9,6 +9,7 @@ module.exports = {
   },
   action: async (inputs, outputs) => {
     // return outputs.success.render();
-    return outputs.res.sendFile('C:/Users/galih/Documents/learning/VUE design/graphich-model-app-stack/assets/dist/index.html')
+    // 'C:/Users/galih/Documents/learning/VUE design/graphich-model-app-stack/assets/dist/index.html'
+    return outputs.res.sendFile(Mukmin.getPath('assets/index.html'))
   }
 };
