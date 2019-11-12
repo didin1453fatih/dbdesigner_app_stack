@@ -12,6 +12,9 @@ module.exports = {
   "POST /forget-password": {
     action: "front-office/forgetPassword"
   },
+  "POST /front-office/api/v1/forgot-password-api": {
+    action: "front-office/forgetPasswordAPI"
+  },  
   "GET /email_confirmation": {
     action: "front-office/emailConfirmation"
   },
