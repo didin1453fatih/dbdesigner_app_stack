@@ -15,7 +15,7 @@ module.exports = {
   "POST /front-office/api/v1/forgot-password-api": {
     action: "front-office/forgetPasswordAPI"
   },  
-  "GET /email_confirmation": {
+  "POST /front-office/api/v1/emailConfirmation": {
     action: "front-office/emailConfirmation"
   },
   "GET /reset-password": {
