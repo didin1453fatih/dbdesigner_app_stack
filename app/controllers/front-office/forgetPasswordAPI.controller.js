@@ -84,7 +84,7 @@ module.exports = {
       var messageHtml = ejs.render(str, {
         confirmation:
           Mukmin.getConfig("app").url +
-          "/reset-password?token=" +
+          "?action=reset-password&token=" +
           tokenPasswordReset
       });
 
