@@ -21,7 +21,7 @@ module.exports = {
   "GET /reset-password": {
     action: "front-office/resetPasswordView"
   },
-  "POST /reset-password": {
+  "POST /front-office/api/v1/reset-password": {
     action: "front-office/resetPassword"
   },
   "POST /front-office/api/account/registration": {
