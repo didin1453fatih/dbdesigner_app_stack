@@ -9,9 +9,6 @@ module.exports = {
   },
   // VIEW SYSTEM
 
-  "POST /forget-password": {
-    action: "front-office/forgetPassword"
-  },
   "POST /front-office/api/v1/forgot-password-api": {
     action: "front-office/forgetPasswordAPI"
   },  
