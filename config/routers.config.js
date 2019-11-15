@@ -8,7 +8,9 @@ module.exports = {
     policies: ["user"]
   },
   // VIEW SYSTEM
-
+  "POST /front-office/api/v1/cekUsername": {
+    action: "front-office/checkUsername"
+  },  
   "POST /front-office/api/v1/forgot-password-api": {
     action: "front-office/forgetPasswordAPI"
   },  
