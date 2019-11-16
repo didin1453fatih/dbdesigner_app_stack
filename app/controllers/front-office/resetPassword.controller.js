@@ -23,49 +23,29 @@ module.exports = {
   },
   outputs: {
     success: {
-      view__changePasswordSuccess: {
-        path: viewResetPassword,
-        data: {
-          success: true,
-          message: `change password success. Please login to access your dashboard`
-        }
+      ok__changePasswordSuccess:{
+        message: `change password success. Please login to access your dashboard`
       }
     },
     error: {
-      view__passwordNotMatch: {
-        path: viewResetPassword,
-        data: {
-          success: false,
-          message: "password not match"
-        }
+      err__passwordNotMatch: {
+        message: "password not match"
       },
-      view__internalSystemError: {
-        path: viewResetPassword,
-        data: {
-          success: false,
-          message: `failure, contact admin code 89`
-        }
+      err__internalSystemError: {
+        message: `failure, contact admin code 89`
       },
-      view__tokenExpires: {
-        path: viewResetPassword,
-        data: {
-          success: false,
-          message: `your token is expire, Please got forget password`
-        }
+      err__tokenExpires: {
+        message: `your token is expire, Please got forget password`
       },
-      view__tokenNotMatch: {
-        path: viewResetPassword,
-        data: {
-          success: false,
-          message: "token not match"
-        }
+      err__tokenNotMatch: {
+        message: "token not match"
       }
     }
   },
   action: async (inputs, outputs) => {
     var db = Mukmin.getDataModel("computate_engine");
     if (inputs.body.password !== inputs.body.password_verify) {
-      return outputs.error.view__passwordNotMatch({
+      return outputs.error.err__passwordNotMatch({
         token: inputs.body.token
       });
     }
@@ -94,27 +74,26 @@ module.exports = {
                   }
                 }
               );
-              return outputs.success.view__changePasswordSuccess({
-                token: inputs.body.token
-              });
+              return outputs.success.ok__changePasswordSuccess();
             } catch (error) {
-              return outputs.error.view__internalSystemError({
+              console.log("error reset password " + error.message);
+              return outputs.error.err__internalSystemError({
                 token: inputs.body.token
               });
             }
           } else {
-            return outputs.error.view__internalSystemError({
+            return outputs.error.err__internalSystemError({
               token: inputs.body.token
             });
           }
         });
       } else {
-        return outputs.error.view__tokenExpires({
+        return outputs.error.err__tokenExpires({
           token: inputs.body.token
         });
       }
     } else {
-      return outputs.error.view__tokenNotMatch({
+      return outputs.error.err__tokenNotMatch({
         token: inputs.body.token
       });
     }

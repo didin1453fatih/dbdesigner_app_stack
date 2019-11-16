@@ -106,7 +106,7 @@ module.exports = {
           var messageHtml = ejs.render(str, {
             confirmation:
               Mukmin.getConfig("app").url +
-              "/email_confirmation?token=" +
+              "?action=email-confirmation&token=" +
               tokenEmailVerify
           });
 

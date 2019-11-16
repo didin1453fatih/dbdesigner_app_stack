@@ -8,17 +8,19 @@ module.exports = {
     policies: ["user"]
   },
   // VIEW SYSTEM
-
-  "POST /forget-password": {
-    action: "front-office/forgetPassword"
-  },
-  "GET /email_confirmation": {
+  "POST /front-office/api/v1/cekUsername": {
+    action: "front-office/checkUsername"
+  },  
+  "POST /front-office/api/v1/forgot-password-api": {
+    action: "front-office/forgetPasswordAPI"
+  },  
+  "POST /front-office/api/v1/emailConfirmation": {
     action: "front-office/emailConfirmation"
   },
   "GET /reset-password": {
     action: "front-office/resetPasswordView"
   },
-  "POST /reset-password": {
+  "POST /front-office/api/v1/reset-password": {
     action: "front-office/resetPassword"
   },
   "POST /front-office/api/account/registration": {

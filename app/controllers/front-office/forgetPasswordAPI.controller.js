@@ -31,13 +31,19 @@ module.exports = {
   },
   outputs: {
     success: {
-      render__formForgetPassword: {
-        path: "front-office/registration/form-forget-password"
+      ok: {
+        message: "Cek mail to reset your password"
       }
     },
     error: {
-      render__formForgetPassword: {
-        path: "front-office/registration/form-forget-password"
+      err__forgetFailure: {
+        message: "Forget password failure"
+      },
+      err__internalServerError: {
+        message: "Internal Server Error"
+      },
+      err__emailNotFound: {
+        message: "Email Not Found"
       }
     }
   },
@@ -67,10 +73,7 @@ module.exports = {
           }
         );
       } catch (error) {
-        return outputs.error.render__formForgetPassword({
-          success: false,
-          message: "Forget password failure"
-        });
+        return outputs.error.err__forgetFailure();
       }
 
       var str = await fs.readFileSync(
@@ -81,7 +84,7 @@ module.exports = {
       var messageHtml = ejs.render(str, {
         confirmation:
           Mukmin.getConfig("app").url +
-          "/reset-password?token=" +
+          "?action=reset-password&token=" +
           tokenPasswordReset
       });
 
@@ -96,23 +99,17 @@ module.exports = {
       await smtpTransport.sendMail(mailOptions, (error, response) => {
         if (error) {
           console.log(error);
-          return outputs.error.render__formForgetPassword({
+          return outputs.error.err__internalServerError({
             message: "Internal Server Error",
             success: false
           });
         } else {
           console.log("Message sent: " + response.message);
-          return outputs.success.render__formForgetPassword({
-            message: "Cek mail to reset your password",
-            success: true
-          });
+          return outputs.success.ok();
         }
       });
     } else {
-      return outputs.error.render__formForgetPassword({
-        message: "email not found",
-        success: false
-      });
+      return outputs.error.err__emailNotFound();
     }
   }
 };

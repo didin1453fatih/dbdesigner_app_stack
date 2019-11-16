@@ -55,7 +55,9 @@ module.exports = {
     } else if (inputs.body.share_status === 2) {
       updatedData.share_status = 2;
       updatedData.share_link =
-        Mukmin.getConfig("app").url + "/shared?uuid=" + dataRespond.uuid;
+        Mukmin.getConfig("app").url +
+        "?action=open&shared=public&uuid=" +
+        dataRespond.uuid;
     }
 
     var updatedRespond = await db.project.update(updatedData, {
